@@ -1,0 +1,6 @@
+/* Este é um exemplo de código SAS que lê um arquivo de texto com informações de salários e cria um conjunto de dados chamado "salary" */
+
+DATA salary;                                        /* Define o conjunto de dados "salary" */
+INFILE '/home/u63480479/salary.txt';                   /* Especifica o caminho e o nome do arquivo de texto a ser lido */
+INPUT year salary;                                      /* Define as variáveis "year" e "salary" que serão lidas do arquivo de texto */
+RUN;                                                   /* Finaliza o bloco de código SAS */
