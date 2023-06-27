@@ -1,0 +1,15 @@
+PROC: No SAS, PROC (Procedure) é usado para executar um procedimento específico, 
+como importar dados, executar análises estatísticas, criar gráficos, etc. 
+Cada PROC tem sua própria sintaxe e conjunto de opções.
+
+DATA Step: O DATA Step é uma parte fundamental do SAS que permite criar, 
+modificar e manipular conjuntos de dados. É usado para ler dados de uma fonte,
+ transformar e preparar os dados e escrever os resultados em um conjunto de dados.
+
+ Então, para resumir:
+
+--- DATA step é usado para manipular e transformar dados, criando novos conjuntos de dados ou
+ modificando os existentes.
+
+ --- PROC step é usado para executar procedimentos específicos, como análises estatísticas, 
+ criação de gráficos ou relatórios.
