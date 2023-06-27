@@ -1,0 +1,22 @@
+DATA weight; /* Define o conjunto de dados chamado "weight" onde os dados serão armazenados */
+
+INFILE '/home/u63480479/import_csv/weightgain.csv' DSD DLM=',' MISSOVER FIRSTOBS=2; 
+
+/* Especifica o arquivo de entrada, suas opções e configurações */
+/* - '/home/u63480479/import_csv/weightgain.csv': Especifica o caminho e o nome do arquivo CSV a ser lido
+   - DSD: Indica que os dados estão em formato delimitado
+   - DLM=',': Define a vírgula (',') como o delimitador das colunas no arquivo CSV
+   - MISSOVER: Trata valores ausentes como faltantes
+   - FIRSTOBS=2: Ignora a primeira linha do arquivo CSV, que normalmente contém cabeçalhos ou informações adicionais */
+
+INPUT id source $ type $ weighta; /* Define as variáveis e seus tipos no arquivo de entrada */
+/* - id: Variável numérica que será lida do arquivo CSV
+   - source: Variável de texto que será lida do arquivo CSV
+   - type: Variável de texto que será lida do arquivo CSV
+   - weighta: Variável numérica que será lida do arquivo CSV */
+
+RUN; /* Finaliza o bloco de código SAS */
+
+/* Em resumo, este código lê um arquivo CSV chamado "weightgain.csv", localizado no caminho '/home/u63480479/import_csv/',
+   com colunas separadas por vírgulas. Ele cria um conjunto de dados chamado "weight" e lê as variáveis "id", "source", "type" e "weighta"
+   do arquivo CSV, armazenando-os no conjunto de dados "weight". A primeira linha do arquivo CSV é ignorada, assumindo que contém cabeçalhos. */
