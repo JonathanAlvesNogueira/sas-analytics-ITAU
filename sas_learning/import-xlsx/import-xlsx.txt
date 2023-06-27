@@ -1,0 +1,22 @@
+proc import out=salesdata datafile='/home/u63480479/import-xlsx/Sample-Sales-Data (3).xlsx' dbms=xlsx REPLACE sheet ='Sheet1';
+
+
+/* Utiliza o procedimento PROC IMPORT para importar dados de um arquivo Excel (.xlsx) para um conjunto de dados SAS chamado "salesdata" */
+/* 
+
+    - out=salesdata: Especifica o nome do conjunto de dados de saída como "salesdata"
+   - datafile='/home/u63480479/import-xlsx/Sample-Sales-Data (3).xlsx': Especifica o caminho e o nome do arquivo Excel a ser importado
+   - dbms=xlsx: Indica o tipo de arquivo sendo importado, neste caso, um arquivo Excel (.xlsx)
+   - REPLACE: Substitui o conjunto de dados "salesdata" se ele já existir
+   - sheet='Sheet1': Especifica a planilha do arquivo Excel que será importada, neste caso, "Sheet1" 
+   
+*/
+
+gentnames=no; /* Desativa a geração automática de nomes de variáveis com base no conteúdo das células do arquivo Excel */
+mixed=yes; /* Permite a mistura de tipos de dados nas colunas, como valores numéricos e de texto */
+
+RUN; /* Executa o bloco de código SAS */
+
+/* Em resumo, este código importa um arquivo Excel chamado "Sample-Sales-Data (3).xlsx", localizado no caminho '/home/u63480479/import-xlsx/',
+   e importa a planilha 'Sheet1'. Os dados são armazenados no conjunto de dados "salesdata" do SAS. A geração automática de nomes de variáveis é desativada,
+   permitindo a mistura de tipos de dados nas colunas. */
