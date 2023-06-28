@@ -1,0 +1,7 @@
+DATA salary(keep=year rename=salary=salaryemp); /* Cria um novo conjunto de dados chamado "salary" que so mostra o year, e renomeia o conjunto para salaryemp */
+INFILE '/home/u63480479/salary.txt'; 
+INPUT year salary; 
+RUN; 
+
+proc print data=salaryemp(firstobs=2 obs=4); /* imprime informações do conjunto salaryemp começando do 2 e terminando no 4*/
+run; 
