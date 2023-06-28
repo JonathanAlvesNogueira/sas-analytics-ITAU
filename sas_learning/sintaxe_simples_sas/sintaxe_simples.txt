@@ -1,0 +1,8 @@
+DATA pessoa;                                            /* DA NOME A MANIPULÇAO DOS DADOS*/
+INPUT first_name $ last_name $ age;                     /* CRIA VARIAVEIS DE AMOSTRA, COMO NO SELECT*/
+DATALINES;                                              /* INDICA QUE OS REGISTROS SERAO DADOS NO CODIGO*/
+    jordan lidenes 25
+    larry barry 19
+    agata boss 22
+    guilherme pereire 29
+RUN;                                                    /* RODA O CODIGO */
