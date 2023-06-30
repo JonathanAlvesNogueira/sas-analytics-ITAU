@@ -1,0 +1,20 @@
+DATA date;    
+INPUT NAME $ BDAY DATE11.;
+
+CARDS;       /* Indica que os dados serão fornecidos na própria linha do código e não em um arquivo separado. */
+ERICK 4 MAR 2021
+LISA 5 JAN 2019
+AGATA 2 DEC 2021 
+GUILHERME 1 NOV 2018
+;
+RUN;
+
+
+/* Executa o código SAS para criar o conjunto de dados "date" */
+
+PROC PRINT DATA=date; 
+/* Executa o procedimento PRINT para exibir os dados do conjunto de dados "date" */
+FORMAT BDAY DATE9.;
+/* Formata a variável "BDAY" para exibição no formato DATE9. (9 caracteres) */
+RUN;
+/* Executa o procedimento PRINT e imprime os dados do conjunto de dados "date" */
