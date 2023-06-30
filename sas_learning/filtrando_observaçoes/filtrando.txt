@@ -1,0 +1,4 @@
+DATA FILTROS;
+SET HOUSEPRICE;    /*puxa informações do conjunto de dados */
+if price < 200000;
+RUN;
