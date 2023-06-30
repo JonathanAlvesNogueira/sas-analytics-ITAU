@@ -1,0 +1,10 @@
+DATA variavel;
+INPUT VENDAS1-VENDAS4;
+vendasTotal = VENDAS1+VENDAS4;
+DATALINES;
+	1 2 3 4
+	2 3 10 20
+	;
+RUN;
+
+proc PRINT data=variavel; RUN;
