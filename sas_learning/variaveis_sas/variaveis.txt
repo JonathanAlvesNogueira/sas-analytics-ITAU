@@ -1,0 +1,5 @@
+DATA HOUSEPRICE;
+INFILE '/home/u63480479/variaveis-calculo/houseprice (2).txt' DLM=" ";
+INPUT TYPE $ PRICE TAX;
+VALOR_CALCULADO = PRICE * TAX;
+RUN;
