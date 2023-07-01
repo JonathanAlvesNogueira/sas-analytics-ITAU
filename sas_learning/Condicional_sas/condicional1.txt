@@ -1,0 +1,20 @@
+DATA A;
+INPUT ANOS;
+DATALINES;
+2000
+2010
+2020
+2030
+;
+RUN;
+
+DATA B;
+SET A;                                            /* IMPORTA O CONJUNTO DE DADOS A */
+IF ANOS > 2010 THEN DO;                           /* ESTABELECE A CONDIÇÃO IF*/  
+	ANO_FINANC = ANOS+30;                          /* CRIA UMA NOVA COLUNA EM CASO DE CONDIÇÃO AIFRMATIVA */
+	PUT ANO_FINANC= ANOS=;
+END;
+ELSE ANOS_UM = ANOS -1;
+RUN;  
+	
+	PROC PRINT DATA=B; RUN;
