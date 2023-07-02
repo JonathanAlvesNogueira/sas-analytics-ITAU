@@ -9,12 +9,12 @@ RUN;
 	
 DATA TABELA;
 SET CASA;
-	LABEL TIPO='TIPO DE CASA'
+	LABEL TIPO='TIPO DE CASA'                          /* Definição de rótulos para as variáveis */
 		  NUMERO='NUMERO DA CASA'
 		  PRECO='PREÇO DA CASA'
 	;
 		
-	PROC FREQ DATA=TABELA; RUN;
+	PROC FREQ DATA=TABELA; RUN;           /* Execução do procedimento FREQ para análise de frequência */
 		
 		
 
