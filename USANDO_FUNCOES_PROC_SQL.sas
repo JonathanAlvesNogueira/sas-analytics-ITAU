@@ -52,7 +52,11 @@ quit;
 
 /* Consulta SQL para calcular a soma dos salários */
 proc sql;
-  select SUM(PRECO) as Soma_Salarios
+  CREATE TABLE SOMA AS select 
+  	NOME_PRODUTO
+	,FORNECEDOR
+	,SUM(PRECO) as Soma_FORNE
+	,COUNT(*) AS QTD
   from PRODUTO
   GROUP BY FORNECEDOR
   ;
