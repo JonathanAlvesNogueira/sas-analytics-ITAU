@@ -41,3 +41,11 @@ proc sql;
   from PRODUTO;
 quit;
 
+
+/* Consulta SQL para encontrar o salário mínimo */
+proc sql;
+  CREATE TABLE MIN_TABLE AS select 
+	MIN(PRECO) as PREC_Minimo
+  from PRODUTO;
+quit;
+
