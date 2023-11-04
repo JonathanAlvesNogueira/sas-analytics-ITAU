@@ -24,3 +24,20 @@ Forno  300  GE  2021 9
 ;
 run;
 
+
+/* Consulta SQL para converter nomes em maiúsculas */
+proc sql;
+ CREATE TABLE NM_MAIUS as select 
+	UPCASE(Nome_PRODUTO) as NM_PRODUTO
+  from PRODUTO;
+quit;
+
+
+
+/* Consulta SQL para encontrar o salário máximo */
+proc sql;
+  CREATE TABLE MAX_TABLE AS select 
+	MAX(PRECO) as PRECO_Maximo
+  from PRODUTO;
+quit;
+
