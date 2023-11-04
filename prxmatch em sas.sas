@@ -1,12 +1,21 @@
-DATA BASE_ANALISE_1 (KEEP= TEM CLUBES);
+
+/**/
+/*Identifique o clube que marcou a maior quantidade de gols ao longo de todos os anos.*/
+/*Exemplo: "O clube 'Nome do Clube' marcou um total de X gols, o maior entre todos os clubes."*/
+
+DATA ANALISE_1;
   SET WORK.TABELA_CLUBES;
-  FORMAT TEM $30.;
+ RUN;
 
-  /* Use PRXMATCH para verificar se '-' está na variável CLUBE */
-  match = prxmatch('/-/', CLUBES);
-
-  IF match > 0 THEN
-    TEM = 'SIM';
-  ELSE
-    TEM = 'NÃO';
+/* COLOCA OS MAIORES EM PRIMEIRO*/
+PROC SORT DATA=ANALISE_1 OUT=ANALISE_2;
+	BY 'Pos.'n;
 RUN;
+
+/* ORDENA DE FORMA DESCENDENTE POR ANO OS MAIOREM EM POSIÇÃO*/
+ PROC SORT DATA=ANALISE_2 OUT=ANALISE_3 NODUPKEY;
+ 	BY DESCENDING ANO;
+RUN;
+
+
+
