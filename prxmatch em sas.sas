@@ -28,11 +28,11 @@ PROC SORT DATA=ANALISE4 OUT=ANALISE_5 NODUPKEY;
 	BY DESCENDING ANO;
 RUN;
 
-
+/* puxa somente os maiores em gols dos últimos 3 anos presentes na tabela */
 DATA BASE_ANALISE6;
 SET ANALISE_5;
 
-	WHERE(ANO>2016);
+	WHERE(ANO>=2015);
 
 
 RUN;
