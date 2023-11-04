@@ -49,3 +49,11 @@ proc sql;
   from PRODUTO;
 quit;
 
+
+/* Consulta SQL para calcular a soma dos salários */
+proc sql;
+  select SUM(PRECO) as Soma_Salarios
+  from PRODUTO
+  GROUP BY FORNECEDOR
+  ;
+quit;
