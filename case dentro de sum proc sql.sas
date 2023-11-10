@@ -1,4 +1,4 @@
-LIBNAME JONY 'C:\Users\joth1\Documents\SAS\sas-analytics-ITAU\JONY';
+LIBNAME JONY '/home/u63480479/my_shared_file_links/u63480479';
 
 
 
